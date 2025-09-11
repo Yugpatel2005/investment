@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Investmentseasy</title>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+   {% include 'nav.html' %}
+  <!-- lifeinsurance-->
+<div id="mainContent">
+  <div class="li">
+    <div class="liheading">
+        <button class="btn1">Retirement Planning</button>
+        <h2>Navigating Your Path to a Secure Retirement</h2>
+        <p>Retirement should be a time of enjoyment and fulfillment, free from financial worries. At InvestmentsEasy, we specialize in creating personalized retirement plans that align with your aspirations, ensuring a comfortable and secure retirement.</p>
+        <img src="static/photo/retirement.jpg">
+    </div>
+    <div class="licontent">
+        <div class="ul1">
+            <h3>Understanding Your Retirement Vision</h3>
+            <ul>
+              <li>
+                  Assessing your retirement goals and desired lifestyle.
+              <li>
+                  Calculating the required retirement corpus based on your life expectancy, health considerations, and inflation.
+              </li>
+            </ul>
+        </div>
+        <div class="ul2">
+            <h3>Income Strategies</h3>
+            <ul>
+                <li>
+                    Diversifying income sources beyond traditional savings, including pensions, annuities, and Social Security benefits.
+                <li>
+                    Strategies for optimizing retirement withdrawals to ensure longevity of funds.
+                </li>
+            </ul>
+        </div>
+        <div class="ul3">
+        <h3>Investment Management</h3>
+            <ul>
+                <li>
+                    Tailoring investment portfolios to balance growth, income, and risk, especially as you approach retirement age.
+                </li>
+                <li>
+                    Regularly reviewing and rebalancing your portfolio in response to market changes and personal circumstances.
+                </li>
+            </ul>
+        </div>
+        <div class="ul4">
+        <h3>Tax Planning</h3>
+            <ul>
+                <li>
+                    Advising on tax-efficient investment vehicles and strategies to minimize tax liabilities during retirement.
+                </li>
+            </ul>
+        </div>
+        <div class="ul5">
+        <h3>Estate Considerations</h3>
+            <ul>
+                <li>
+                    Integrating estate planning to ensure smooth transfer of your assets and fulfillment of your legacy wishes.
+                </li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  <section class="profile-section">
+      <div class="container">
+        <h2>Financial Planning <br>Made Easy.<br><span class="highlight-green">Putting YOU First.</span></h2>
+        <div class="profile-card">
+          <img src="static/photo/monalipatel.png" alt="Monali Patel" class="profile-img">
+          <div class="profile-info">
+            <h3>I am Monali Patel</h3>
+            <a href="mailto:monali@investmentseasy.com">monali@investmentseasy.com</a>
+            <p>
+              Reach out with any questions or to set up a meeting to discover the
+              best path to your financial freedom!
+            </p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+</div>
+ <script>
+    let isOpen = false;
+
+    function toggleNav() {
+      const nav = document.getElementById("myNav");
+      const icon = document.getElementById("menuIcon");
+      const content = document.getElementById("mainContent");
+
+      if (!isOpen) {
+        nav.classList.add("show");
+        content.classList.add("blur");
+        icon.textContent = "×"; // cross
+        isOpen = true;
+      } else {
+        nav.classList.remove("show");
+        content.classList.remove("blur");
+        icon.textContent = "☰"; // hamburger
+        isOpen = false;
+      }
+    }
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const today = new Date().getDay();
+    // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+    const table = document.getElementById("hoursTable");
+    if (table) {
+      const rows = table.getElementsByTagName("tr");
+      // Adjust because in JS Sunday=0, Monday=1, ... so rows[1] = Monday
+      const index = today === 0 ? 7 : today;
+      if (rows[index - 1]) {
+        rows[index - 1].classList.add("active");
+      }
+    }
+  });
+</script>
+</body>
+</html>

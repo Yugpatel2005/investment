@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="static/css/style.css" rel="stylesheet">
+    <style>
+        .profile-card {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background: white;
+          padding: 20px;
+          border-radius: 12px;
+          gap: 20px;
+        }
+
+        .profile-photo {
+          width: 200px;
+          height: auto;
+          border-radius: 12px;
+          object-fit: cover;
+        }
+
+        .profile-info {
+          flex: 1;
+        }
+
+        .profile-info h3 {
+          font-size: 24px;
+          margin: 0 0 10px;
+        }
+
+        .profile-info a {
+          color: #10A44A;
+          text-decoration: none;
+          font-weight: 500;
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        .profile-info p {
+          font-size: 16px;
+          color: #555;
+        }
+
+        .leaf-icon {
+          width: 80px;
+          height: auto;
+        }
+
+        /* ============= Responsive ============= */
+        @media (max-width: 768px) {
+          .profile-card {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          .profile-photo {
+            width: 100%;
+            max-width: 300px;
+          }
+
+          .leaf-icon {
+            display: none; /* Hide leaf icon on mobile */
+          }
+        }
+
+    </style>
+</head>
+<body>
+<div class="profile-card">
+  <img src="static/photo/monalipatel.png" alt="Monali Patel" class="profile-photo">
+  <div class="profile-info">
+    <h3>I am Monali Patel</h3>
+    <a href="mailto:monali@investmentseasy.com">monali@investmentseasy.com</a>
+    <p>
+      Reach out with any questions or to set up a meeting to discover the
+      best path to your financial freedom!
+    </p>
+  </div>
+  <img src="leaf-icon.png" alt="Leaf Icon" class="leaf-icon">
+</div>
+
+</body>
+</html>

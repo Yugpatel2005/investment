@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Investmentseasy</title>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+   {% include 'nav.html' %}
+  <!-- lifeinsurance-->
+<div id="mainContent">
+  <div class="li">
+    <div class="liheading">
+        <button class="btn1">Wealth Management</button>
+        <h2>Comprehensive Wealth Management for Lasting Prosperity</h2>
+        <p>Wealth management is more than just investment advice; it encompasses all aspects of your financial life. At InvestmentsEasy, we offer holistic wealth management services designed to grow, protect, and preserve your wealth over the long term.</p>
+        <img src="static/photo/wealthmanagement.jpg">
+    </div>
+    <div class="licontent">
+        <div class="ul1">
+            <h3>Asset Allocation and Management</h3>
+            <ul>
+                <li>
+                    Creating an asset allocation strategy that balances growth, income, and preservation of capital.
+                <li>
+                    Continuously monitoring and managing your investment portfolio.
+                </li>
+            </ul>
+        </div>
+        <div class="ul2">
+            <h3>Financial Planning Integration</h3>
+            <ul>
+                <li>
+                    Integrating wealth management with financial planning elements like retirement, tax, and estate planning.
+                <li>
+                    Providing advice on cash flow management, debt management, and major financial decisions.
+                </li>
+            </ul>
+        </div>
+        <div class="ul3">
+        <h3>Wealth Transfer Planning</h3>
+            <ul>
+                <li>
+                    Advising on efficient ways to transfer wealth to future generations, including trusts and gifting strategies.
+                </li>
+                <li>
+                    Facilitating family wealth education and succession planning discussions.
+                </li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  <section class="profile-section">
+      <div class="container">
+        <h2>Financial Planning <br>Made Easy.<br><span class="highlight-green">Putting YOU First.</span></h2>
+        <div class="profile-card">
+          <img src="static/photo/monalipatel.png" alt="Monali Patel" class="profile-img">
+          <div class="profile-info">
+            <h3>I am Monali Patel</h3>
+            <a href="mailto:monali@investmentseasy.com">monali@investmentseasy.com</a>
+            <p>
+              Reach out with any questions or to set up a meeting to discover the
+              best path to your financial freedom!
+            </p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+</div>
+ <script>
+    let isOpen = false;
+
+    function toggleNav() {
+      const nav = document.getElementById("myNav");
+      const icon = document.getElementById("menuIcon");
+      const content = document.getElementById("mainContent");
+
+      if (!isOpen) {
+        nav.classList.add("show");
+        content.classList.add("blur");
+        icon.textContent = "×"; // cross
+        isOpen = true;
+      } else {
+        nav.classList.remove("show");
+        content.classList.remove("blur");
+        icon.textContent = "☰"; // hamburger
+        isOpen = false;
+      }
+    }
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const today = new Date().getDay();
+    // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+    const table = document.getElementById("hoursTable");
+    if (table) {
+      const rows = table.getElementsByTagName("tr");
+      // Adjust because in JS Sunday=0, Monday=1, ... so rows[1] = Monday
+      const index = today === 0 ? 7 : today;
+      if (rows[index - 1]) {
+        rows[index - 1].classList.add("active");
+      }
+    }
+  });
+</script>
+</body>
+</html>
