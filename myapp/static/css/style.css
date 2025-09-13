@@ -411,6 +411,7 @@ header .container{
       margin-top:100px;
     }
 
+
     .card1{
         width: 934.5px;
         height: 344px;
@@ -436,9 +437,7 @@ header .container{
         height: 344px;
         angle: 0 deg;
         opacity: 1;
-
     }
-
 
     .card1-content {
     width: 422px;
@@ -463,7 +462,6 @@ header .container{
     leading-trim: NONE;
     line-height: 100%;
     letter-spacing: 0%;
-
     }
 
 
@@ -857,7 +855,7 @@ header .container{
   }
 
   .li1{
-    border-top: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD
   }
   .section-advisor1{
     width: 1350px;
