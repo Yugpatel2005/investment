@@ -2,33 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>InvestmentsEasy</title>
+    <title>Investments Easy</title>
     <link href="static/css/style.css" rel="stylesheet">
 </head>
 <body>
- <header>
-    <div class="container-con-nav">
-        <a href="/"><img src="static/photo/logo.png" alt="Investmentseasy Logo" class="logo"></a>
-      <nav class="nav-links">
-        <a href="/lifeinsurance">Life Insurance</a>
-        <a href="/longtermcareplanning">longterm care</a>
-        <a href="/retiremnt">Retirement</a>
-        <a href="/estateplanning">Estate Planning</a>
-        <a href="/wealthmanagement">Wealth Management</a>
-        <a href="/collegeplanning">College Planning</a>
-      </nav>
+<!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+        <a href="/"><img src="static/photo/logo.png"></a>
     </div>
-  </header>
-<script>
-    // Get current page URL
-const currentLocation = window.location.href;
-const menuItems = document.querySelectorAll("nav a");
 
-menuItems.forEach(item => {
-  if (item.href === currentLocation) {
-    item.classList.add("active");
-  }
-});
-</script>
+    <!-- Desktop menu links -->
+    <div class="nav-links">
+      <a href="lifeinsurance">Life Insurance</a>
+      <a href="longtermcareplanning">Longterm care</a>
+      <a href="retirement">Retirement</a>
+      <a href="estateplanning">Estate Planning</a>
+      <a href="wealthmanagement">Wealth Management</a>
+      <a href="collegeplanning">College Planning</a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button class="menu-toggle" onclick="toggleNav()">
+      <span id="menuIcon"><img src="static/photo/vector.png"></span>
+      <span id="closeIcon" style="display:none;"><img src="static/photo/vector2.png"></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile overlay menu -->
+  <div id="myNav" class="overlay">
+    <a href="lifeinsurance">Life Insurance</a>
+    <a href="longtermcareplanning">Longterm care</a>
+    <a href="retirement">Retirement</a>
+    <a href="estateplanning">Estate Planning</a>
+    <a href="wealthmanagement">Wealth Management</a>
+    <a href="collegeplanning">College Planning</a>
+  </div>
+
+
+
+
 </body>
 </html>

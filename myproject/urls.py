@@ -23,11 +23,11 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="index"),
-    path('index2', views.index2, name="index2"),
-    path('lifeinsurance',views.lifeinsurancepage, name="lifeinsurance"),
-    path('longtermcareplanning', views.longtermcareplanningpage, name="longtermcareplanningpage"),
+    path('fetchcontact', views.fetchcontact, name="fetchcontact"),
+    path('lifeinsurance',views.lifeinsurance,name="lifeinsurance"),
+    path('longtermcareplanning',views.longtermcareplanningpage,name="longtermcareplanningpage"),
     path('retiremnt',views.retirementpage,name="retirementpage"),
     path('estateplanning',views.estateplanningpage,name="estateplanningpage"),
     path('wealthmanagement',views.wealthmanagementpage,name="wealthmanagementpage"),
     path('collegeplanning',views.collegeplanningpage,name="collegeplanningpage"),
-]
+]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
