@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'fallback-key')
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['investment-1.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['investment-1-zlws.onrender.com', 'localhost', '127.0.0.1']
 
 
 
